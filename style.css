@@ -1,0 +1,39 @@
+* {
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --color: #735da5;
+      }
+      a {
+        text-decoration: none;
+      }
+      .container {
+        position: relative;
+        background-color: #d3c5e5;
+        background-image: url("birthday-wish/dipu/img-33.png"),
+          linear-gradient(to right, #1a1a1a, #aaa);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+      }
+      .nav {
+        height: 10vh;
+        width: 100%;
+        /* border: 2px solid blue; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .overlay {
+        position: absolute;
+        /* border: 2px solid red; */
+        padding: 10px 30px;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        color: white;
+        background: rgba(0, 0, 0, 0.2);
+      }

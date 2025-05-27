@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video</title>
+    <link
+      rel="shortcut icon"
+      href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUjnnKtJpF7TnBoLskK8-d8slf1HTq00qHRA&s"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      /* #container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+      .video-div{
+        height: 600px;
+        object-fit: contain;
+      }
+      video{
+        height: 80%;
+      } */
+      #container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .video-div {
+        background: #f3f3f3;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+        /* object-fit: cover; */
+      }
+
+      .video-div video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .card-body {
+        padding: 10px 15px;
+      }
+      #video-1 {
+        grid-column: span 2;
+      }
+      @media screen and (max-width: 576px) {
+        #container {
+          grid-template-columns: 1fr;
+        }
+        #video-1 {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="card bg-base-100 w-full shadow-sm">
+      <div id="video-1" class="video-div">
+        <figure>
+          <video controls src="../dipu/video-1.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-11.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-8.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-9.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-10.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-2.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-3.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-4.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-5.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-6.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+      <div class="video-div">
+        <figure>
+          <video controls src="../dipu/video-7.mp4"></video>
+        </figure>
+        <div class="card-body bg-slate-100">
+          <h2 class="card-title">Card Title</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

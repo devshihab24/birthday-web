@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <button
+        onclick="this.classList.add('clicked');
+      setTimeout(()=>{
+        this.classList.remove('clicked')
+      }, 800)"
+        id="open-modal"
+        class="btn"
+      >
+        Click me!
+      </button>
+      <dialog id="dialog">
+        <h2>hello world</h2>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+          temporibus, necessitatibus nihil perspiciatis sapiente eos expedita
+          odio aut reprehenderit hic!
+        </p>
+        <div class="close-btn-container"><button class="close-btn">Close</button></div>
+      </dialog>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
