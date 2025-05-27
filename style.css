@@ -150,3 +150,12 @@ a {
     background: rgba(0, 0, 0, 0);
   }
 }
+@media screen and (max-width: 576px) {
+  #dialog{
+    width: 30ch;
+  }
+  .content{
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
