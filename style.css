@@ -1,39 +1,152 @@
 * {
-        margin: 0;
-        padding: 0;
-      }
-      :root {
-        --color: #735da5;
-      }
-      a {
-        text-decoration: none;
-      }
-      .container {
-        position: relative;
-        background-color: #d3c5e5;
-        background-image: url("birthday-wish/dipu/img-33.png"),
-          linear-gradient(to right, #1a1a1a, #aaa);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        height: 100vh;
-      }
-      .nav {
-        height: 10vh;
-        width: 100%;
-        /* border: 2px solid blue; */
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .overlay {
-        position: absolute;
-        /* border: 2px solid red; */
-        padding: 10px 30px;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        color: white;
-        background: rgba(0, 0, 0, 0.2);
-      }
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --color: #735da5;
+}
+a {
+  text-decoration: none;
+}
+.container {
+  position: relative;
+  background-color: #d3c5e5;
+  background-image: url("birthday-wish/dipu/img-33.png"),
+    linear-gradient(to right, #1a1a1a, #aaa);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.nav {
+  height: 10vh;
+  width: 100%;
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overlay {
+  position: absolute;
+  /* border: 2px solid red; */
+  padding: 10px 30px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* modal section design */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+/* this design is for button */
+.button {
+  position: relative;
+  padding: 15px 30px;
+  border-radius: 8px;
+  background: linear-gradient(#a74482, #f84aa7);
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4),
+    inset 10px 10px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#open-modal::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: #d0b3ee8f;
+  border-radius: inherit;
+}
+#open-modal:hover::before {
+  width: 100%;
+  transition: width ease 0.8s;
+}
+#open-modal:hover {
+  color: black;
+  filter: drop-shadow(0 0 8px rgb(255, 51, 204));
+}
+#open-modal.clicked {
+  animation: bounce 0.8s linear infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* close btn */
+.close-btn {
+  padding: 7px 15px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4),
+    inset 2px 2px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+.close-btn-container {
+  text-align: end;
+}
+
+/* this design section is for modal */
+#dialog {
+  margin: auto;
+  padding: 30px;
+  max-width: 40ch;
+  border: none;
+  border-radius: 6px;
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+.content {
+  padding: 20px 0;
+}
+#dialog[open] {
+  opacity: 1;
+}
+@starting-style {
+  #dialog[open] {
+    opacity: 0;
+  }
+}
+
+#dialog::backdrop {
+  background: rgba(0, 0, 0, 0);
+  transition: all 0.4s allow-discrete;
+}
+#dialog[open]::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@starting-style {
+  #dialog[open]::backdrop {
+    background: rgba(0, 0, 0, 0);
+  }
+}

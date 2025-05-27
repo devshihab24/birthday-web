@@ -22,7 +22,7 @@
       type="text/css"
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
@@ -33,13 +33,54 @@
             <ul
               class="menu dropdown-content bg-[rgba(0,0,0,0.4)] rounded-box z-1 w-32 items-center p-2 shadow-sm text-base font-bold"
             >
-              <li class="text-white font-semibold"><a target="_blank" href="birthday-wish/Modal/video.html">See Videos</a></li>
-              <li class="text-white font-semibold"><a class="text-white" href="birthday-wish/album.html" target="_blank">See Photos</a></li>
+              <li class="text-white font-semibold">
+                <a target="_blank" href="birthday-wish/Modal/video.html"
+                  >See Videos</a
+                >
+              </li>
+              <li class="text-white font-semibold">
+                <a
+                  class="text-white"
+                  href="birthday-wish/album.html"
+                  target="_blank"
+                  >See Photos</a
+                >
+              </li>
             </ul>
           </details>
-          <summary class="btn btn-ghost text-lg font-semibold ">Item</summary>
+          <div class="modal-container text-lg font-semibold">
+            <button
+              onclick="this.classList.add('clicked');
+      setTimeout(()=>{
+        this.classList.remove('clicked')
+      }, 800)"
+              id="open-modal"
+              class="button"
+            >
+              Click me!
+            </button>
+            <dialog id="dialog">
+              <h2>Dear Dipu,</h2>
+              <p class="content">
+                From childhood memories to grown-up dreams, you’ve been there through it all. Happy Birthday to the one who knows me better than I know myself. <br>
+                I wish, may Allah fulfill all your good wishes😊
+              </p>
+              <div class="close-btn-container">
+                <button class="close-btn">Close</button>
+              </div>
+            </dialog>
+          </div>
         </div>
       </div>
     </div>
+
+    <script>
+      const clickBtn = document.getElementById("open-modal");
+      const openModal = document.getElementById("dialog");
+      const closeBtn = document.querySelector(".close-btn");
+
+      clickBtn.addEventListener("click", () => openModal.showModal());
+      closeBtn.addEventListener("click", () => openModal.close());
+    </script>
   </body>
 </html>
